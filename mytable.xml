@@ -1,0 +1,29 @@
+  
+ <table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">  
+   <meta>  
+     <author>DennisWang</author>
+     <sampleQuery>select * from {table} where url="www.myfeed.com/stuff.txt"</sampleQuery>  
+   </meta>  
+   <bindings>  
+   <select itemPath="" produces="XML">  
+     <urls>  
+       <url></url>  
+     </urls>  
+     <inputs>  
+       <key id="url" type="xs:string" paramType="variable" required="true" /> 
+       <key id="charset" type="xs:string" paramType="variable" required="true" />
+       <key id="xpath" type="xs:string" required="true" paramType="variable"/>        
+     </inputs>  
+       <execute><![CDATA[ 
+    
+              var sel = "select * from html where url=\'" + url + "\'and charset=\"" + charset + "\"" and xpath=\'"+xpath+"\'; 
+              //y.log(sel); 
+              var text = y.query(sel); 
+              var text1 = text.results; 
+              response.object = text1.toString(); 
+ 
+ 
+       ]]></execute>  
+     </select>  
+   </bindings>  
+ </table>
