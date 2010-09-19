@@ -11,7 +11,7 @@
      <inputs>  
        <key id="url" type="xs:string" paramType="variable" required="true" /> 
        <key id="charset" type="xs:string" paramType="variable" required="true" />
-       <key id="xpath" type="xs:string" required="true" paramType="variable"/>        
+       <key id="xpath" type="xs:string" paramType="variable" required="true"/>        
      </inputs>  
        <execute><![CDATA[ 
     
