@@ -15,7 +15,7 @@
      </inputs>  
        <execute><![CDATA[ 
     
-              var sel = "select * from html where url=\'" + url + "\'and charset=\"" + charset + "\"" and xpath=\'"+xpath+"\'; 
+              var sel = "select * from html where url=\'" + url + "\'and charset=\"" + charset + "\" and xpath=\'"+xpath+"\'"; 
               //y.log(sel); 
               var text = y.query(sel); 
               var text1 = text.results; 
